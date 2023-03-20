@@ -8,7 +8,7 @@ void input(double *data, int n) {
 
 void output(double *data, int *n) {
     for (int i = 0; i < *n - 1; i++) {
-        printf("%lf ", data[i]);
+        printf("%.2lf ", data[i]);
     }
-    printf("%lf", data[*n - 1]);
+    printf("%.2lf", data[*n - 1]);
 }
