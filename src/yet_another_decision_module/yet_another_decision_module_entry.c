@@ -1,12 +1,19 @@
 #include "decision.h"
+#include "../data_libs/data_io.h"
 int main()
 {
-    double *data;
     int n;
+    int trash;
+    if(scanf("%d.%d", &n, &trash) == 1 && n > 0) {
+        double *data = (double *) malloc(sizeof(double) * n);
     
-    if (make_decision(data, n))
-        printf("YES"); 
-    else
-        printf("NO");  
+        input(data, n);
+        if (make_decision(data, n))
+            printf("YES"); 
+        else
+            printf("NO");  
+        free(data);
+
+    }
     return (0);
 }
