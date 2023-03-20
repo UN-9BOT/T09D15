@@ -1,10 +1,11 @@
 #pragma once
 #ifndef DATA_STAT_H
 #define DATA_STAT_H
+#include <stdio.h>
+#include <math.h>
 double max(double *data, int n);
 double min(double *data, int n);
 double mean(double *data, int n);
 double variance(double *data, int n);
-double mAbs(double n);
 
 #endif

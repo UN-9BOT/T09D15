@@ -6,16 +6,12 @@ int main()
 {
     int n;
     int trash;
-    if(scanf("%d.%d", &n, &trash) == 1) {
+    if(scanf("%d.%d", &n, &trash) == 1 && n > 0) {
         double *data = (double *) malloc(sizeof(double) * n);
     
-    //Don`t forget to allocate memory !
         input(data, n);
 
-        if (normalization(data, n))
-            output(data, &n);
-        else
-            printf("ERROR");  
+        (normalization(data, n)) ? output(data, &n) : printf("ERROR");  
         free(data);
     }
     return (0);

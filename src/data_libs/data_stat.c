@@ -1,5 +1,4 @@
 #include "data_stat.h"
-
 double max(double *data, int n) {
     double res = *data; 
     for (int i = 0; i < n; i++) {
@@ -16,4 +15,3 @@ double min(double *data, int n) {
     return (res);
 }
 
-double mAbs(double n) { return ((n < 0) ? -n : n); }

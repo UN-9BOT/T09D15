@@ -1,4 +1,5 @@
-void main()
+#include "decision.h"
+int main()
 {
     double *data;
     int n;
@@ -7,4 +8,5 @@ void main()
         printf("YES"); 
     else
         printf("NO");  
+    return (0);
 }
