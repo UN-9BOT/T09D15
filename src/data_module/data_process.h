@@ -6,8 +6,3 @@
 int normalization(double *data, int n);
 
 #endif
-
-
-
-
-            

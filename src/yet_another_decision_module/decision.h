@@ -5,9 +5,3 @@
 int make_decision(double *data, int n);
 #define GOLDEN_RATIO 0.666
 #endif
-
-
-
-
-
-            

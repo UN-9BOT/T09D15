@@ -10,7 +10,7 @@ int normalization(double *data, int n) {
     /* printf("%lf ", min_value); */
     double size = max_value - min_value;
 
-    if (fabs(size) < EPS) {
+    if (fabs(size) > EPS) {
         for (int i = 0; i < n; i++) {
             data[i] = data[i] / size - min_value / size;
         }
