@@ -8,8 +8,10 @@ YET=../yet_another_decision_module
 
 all: Quest_3 
 	rm -rf *.o
+
 build_with_static: clean Quest_3 data_process.o data_stat.o data_io.o data_stat.a
 	$(CC) $(CFLAG) main_executable_module.o data_process.o data_stat.o data_io.o decision.o -L. -ldata_stat -o ../build/Quest_5
+	rm -rf *.a
 
 data_stat.a: $(LIB)/data_stat.c $(LIB)/data_stat.h
 	$(CC) $(CFLAG) -c $(LIB)/data_stat.c
@@ -36,9 +38,11 @@ data_io.o: $(LIB)/data_io.o $(LIB)/data_io.o
 
 clean:
 	rm -rf *.o
+	rm -rf *.a
 
 clean_all:
 	rm -rf *.o
+	rm -rf *.a
 	rm ../build/Quest_3
 
 rebuild: clean_all all
