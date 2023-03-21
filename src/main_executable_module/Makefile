@@ -10,7 +10,6 @@ all: Quest_3
 	rm -rf *.o
 
 build_with_static: clean Quest_3 data_process.o data_stat.o data_io.o data_stat.a
-	mkdir ../build
 	$(CC) $(CFLAG) main_executable_module.o data_process.o data_stat.o data_io.o decision.o -L. -ldata_stat -o ../build/Quest_5
 	rm -rf *.a
 
@@ -38,13 +37,10 @@ data_stat.o: $(LIB)/data_stat.c $(LIB)/data_stat.h
 data_io.o: $(LIB)/data_io.o $(LIB)/data_io.o
 	$(CC) $(CFLAG) -c $(LIB)/data_io.c
 
-clean:
-	rm -rf *.o
-	rm -rf *.a
 
-clean_all:
+clean:
 	rm -rf *.o
 	rm -rf *.a
 	rm -rf ../build/
 
-rebuild: clean_all all
+rebuild: clean all
